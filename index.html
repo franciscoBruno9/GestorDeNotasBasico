@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Notas de Alumnos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestor de Notas de Alumnos</h1>
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <select id="materia" required>
+            <option value="">Seleccione una materia</option>
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Lengua">Lengua</option>
+            <option value="Historia">Historia</option>
+            <option value="Ciencias">Geografía</option>
+        </select>
+        <input type="number" id="nota" placeholder="Nota" min="0" max="10" required>
+        <button type="submit">Agregar Nota</button>
+    </form>
+
+    <div>
+        <h2>Búsqueda</h2>
+        <input type="text" id="filtrarNombre" placeholder="Filtrar por nombre">
+        <select id="filtrarMateria">
+            <option value="">Filtrar por materia</option>
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Lengua">Lengua</option>
+            <option value="Historia">Historia</option>
+            <option value="Geografia">Geografía</option>
+        </select>
+        <button id="buscar">Buscar</button>
+        <button id="limpiar">Limpiar Filtros</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Materia</th>
+                <th>Nota</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="listaEstudiantes"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
