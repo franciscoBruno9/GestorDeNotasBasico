@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const alumnosFiltrados = alumnos.filter(alumno => {
             const coincide = alumno.nom.toLowerCase().includes(nomFiltro) || 
                                 alumno.ape.toLowerCase().includes(nomFiltro);
-            const matchesSubject = !materiaFiltro || alumno.materia === materiaFiltro;
-            return coincide && matchesSubject;
+            const coincideMateria = !materiaFiltro || alumno.materia === materiaFiltro;
+            return coincide && coincideMateria;
         });
         alumnosFiltrados.forEach(alumno => agregarAlumnoEnTabla(alumno));
     }
