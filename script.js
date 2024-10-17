@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ape,
       materia,
       not: not.toString().replace(".", ","),
-      fecha, // Asegúrate de que la fecha se almacene correctamente
+      fecha, // Asegúrate de que la fecha se almacene correctamentee
     };
     const alumnos = JSON.parse(localStorage.getItem("alumnos")) || [];
     alumnos.push(alumno);
